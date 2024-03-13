@@ -1,8 +1,9 @@
 import {HttRequest,HttpResponse} from '../protocols/http'
 import { badRequest } from '../helpers/http-helper'
 import { MissingParamError } from '../errors/missing-params-errors'
+import { Controller } from '../protocols/controller'
 
-export class SignUpController{
+export class SignUpController implements Controller{
     handle(httpRequest:HttRequest):HttpResponse{
 
         if(!httpRequest.body.name){
@@ -19,7 +20,6 @@ export class SignUpController{
             if(!httpRequest.body[field]){
                 return badRequest(new MissingParamError(field))
             }
-
         }
     }
 }
