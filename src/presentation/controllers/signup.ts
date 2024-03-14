@@ -3,6 +3,7 @@ import { badRequest } from '../helpers/http-helper'
 import { MissingParamError } from '../errors/missing-params-errors'
 import { Controller } from '../protocols/controller'
 
+
 export class SignUpController implements Controller{
     handle(httpRequest:HttRequest):HttpResponse{
 
