@@ -8,18 +8,20 @@
     "test:verbose": "jest --passWithNoTests --runInBand",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
-    "test:staged":"npm test -- --findRelatedTests",
-    "test:ci":"npm test -- --coverage"
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage"
   },
   "keywords": [],
   "author": "felix eugenio mavila",
   "license": "ISC",
   "dependencies": {
-    "git-commit-msg-linter": "^5.0.7"
+    "git-commit-msg-linter": "^5.0.7",
+    "validator": "^13.11.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.26",
+    "@types/validator": "^13.11.9",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "eslint": "^8.57.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
